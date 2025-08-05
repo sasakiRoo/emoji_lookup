@@ -22,4 +22,14 @@ function searchEmoByName(name) {
   }
 }
 
-module.exports = { searchEmoByName };
+function searchNameOfEmo(givenEmoji) {
+  const targetEmoji = givenEmoji;
+  if (!data[targetEmoji]) {
+    console.log(`${targetEmoji} is not available, try again!`);
+    rl.close();
+  }
+  console.log(`${targetEmoji}'s name is: ${data[targetEmoji].name}`);
+  rl.close();
+}
+
+module.exports = { searchEmoByName, searchNameOfEmo };
